@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 100vh;
+    background-color: #161513;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.background-gradient{
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+}
+.background-gradient-text{
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.background-image{
+  background-image: linear-gradient(45deg, #3f0028 #de6311)
+}
+
+@layer components{
+
+  .about-skill{
+    @apply flex gap-5 md:gap-12 items-center transition duration-300;
+  }
+  .about-skill:hover{ 
+    @apply transform scale-105 duration-300
+  }
+  .about-skill p{
+    @apply min-w-36 text-xl md:text-[24px] font-medium;
+  }
+  .about-skill hr{
+    @apply text-[20px] outline-none border-none w-[50%] h-[6px] md:h-2 rounded-[50px] background-gradient;
+  }
+  .about-achievement{
+    @apply flex flex-col items-center gap-2 transition duration-500;
+  }
+  .about-achievement:hover{
+    @apply transform scale-110 duration-500
+  }
+  .about-achievement h1{
+    @apply text-3xl md:text-6xl font-bold md:font-semibold background-gradient-text bg-clip-text;
+  }
+  .about-achievement p{
+    @apply  text-base md:text-[22px] text-start md:text-center font-semibold;
+  }
+  .contact-detail{
+    @apply flex items-center gap-5;
+  }
+}
+
+@layer components{
+  .contact-right label{
+    @apply text-[#d8d8d8] text-[22px] font-medium;
+  }
+  .contact-right input{
+    @apply border-none w-full md:w-[700px] h-16 pl-5 rounded bg-[#32323c] text-[#a0a0a0] font-[Outfit] text-[20px];
+  }
+}
+
